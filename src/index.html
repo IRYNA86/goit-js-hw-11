@@ -12,17 +12,33 @@
     />
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-      <button type="submit">Search</button>
-    </form>
-
-    <div class="gallery">
-      <!-- Карточки изображений -->
+    <div class="formSearch container">
+      <div class="formSearch__style">
+        <form class="search-form" id="search-form">
+          <input
+            class="search-form-input"
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+          <button class="search-form-button" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="gallery">
+        <!-- Карточки изображений -->
+      </div>
+      <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+      <!-- <include src="./partials/example.html"></include> -->
+      <button type="button" class="showMore button">
+        <span
+          class="spinner-border spinner-border-sm spinner is-hidden"
+          role="status"
+          aria-hidden="true"
+        ></span>
+        <span class="label">Show more</span>
+      </button>
     </div>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <!-- <include src="./partials/example.html"></include> -->
-
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
